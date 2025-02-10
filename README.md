@@ -4,7 +4,12 @@
 
 ## Running the app
 
-* Simply ./run.sh on a docker host and go to http://localhost:5000
+* Ensure you have docker desktop installed on your local computer.
+
+Then, simply:
+
+* Run the docker image build: ./build.sh
+* ./run.sh and go to http://localhost:5000
 
 ## Building the docker image:
 
