@@ -2,6 +2,10 @@
 
 * A simple, dockerised self-hostable face recognition service in Python flask and OpenCV
 
+## Running the app
+
+* Simply ./run.sh on a docker host and go to http://localhost:5000
+
 ## Building the docker image:
 
 ```
