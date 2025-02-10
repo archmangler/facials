@@ -42,7 +42,13 @@ def detect_faces(image_path):
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    # Get list of processed images from output directory
+    output_images = []
+    for filename in os.listdir(app.config['OUTPUT_FOLDER']):
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+            output_images.append(filename)
+    output_images.sort(reverse=True)  # Show newest first
+    return render_template('index.html', gallery_images=output_images)
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
